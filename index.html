@@ -6,20 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="js/script.js"></script>
     <title>Carosello</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="root">
         <div id="carousel">
             <i id="prev" class="fa-solid fa-circle-arrow-left"></i>
             <div class="gallery">
-                
+                <figure class="active">
+                    <img src="img/01.webp">
+                    <figcaption>
+                      <h2>Marvel's Spiderman Miles Morales</h2>
+                      <h3>lorem ipsum dolor sit amet</h3>
+                    </figcaption>
+                  </figure>
             </div>
             <i id="next" class="fa-solid fa-circle-arrow-right"></i>
         </div>
         <div id="thumbnails">
+            <img v-for="pic in sources" v-bind:src="pic.image" alt="" class="">
         </div>
+        
     </div>
-   <script src="data.js"></script>
+    <script src="js/data.js"></script>
 </body>
 </html>
