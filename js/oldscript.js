@@ -33,7 +33,6 @@ function changePic(target){
 
   galleryFigures[currentActiveIndex].classList.add('active');
   thumb[currentActiveIndex].classList.add('active');
-
 }
 
 
